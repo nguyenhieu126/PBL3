@@ -8,11 +8,11 @@ namespace StackBook.Models
         public Guid CartDetailId { get; set; } = Guid.NewGuid();
         [Required]
         public Guid CartId { get; set; }
-        public virtual Cart Cart { get; set; }
+        public virtual ICollection<Cart>? Carts { get; set; }
 
         [Required]
         public Guid BookId { get; set; }
-        public virtual Book Book { get; set; }
+        public virtual Book? Book { get; set; }
 
         [Required]
         public int Quantity { get; set; }

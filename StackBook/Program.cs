@@ -41,6 +41,8 @@ using (var scope = app.Services.CreateScope())
 {
     var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
 
+
+
     if (!dbContext.Categories.Any()) // Kiểm tra nếu bảng rỗng
     {
         dbContext.Categories.AddRange(new List<Category>
@@ -903,7 +905,7 @@ using (var scope = app.Services.CreateScope())
     bool open = false;
     if (open == false)
     {
-        string filePath = "C:\\Users\\ASUS\\Documents\\Book-data.xlsx";
+        string filePath = "D:\\2024-2025\\PBL3\\StackBook\\Book-data.xlsx";
         if (!File.Exists(filePath))
         {
             Console.WriteLine("❌ File Excel không tồn tại!");
